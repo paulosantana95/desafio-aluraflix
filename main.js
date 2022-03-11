@@ -7,7 +7,6 @@ let movieList = [
 ];
 
 let newMovie = document.querySelector("#showMovieList");
-let imgLink = document.querySelector("#imgLink").value;
 let i;
 
 for(i = 0; i < movieList.length; i++) {
@@ -15,7 +14,9 @@ for(i = 0; i < movieList.length; i++) {
 }
 
 function addMovie(){
-    if (movieList.indexOf(imgLink) === -1){
+    let imgLink = document.querySelector("#imgLink").value;
+    
+    if ( movieList.indexOf(imgLink) === -1){
     
         movieList.push(imgLink);
 
