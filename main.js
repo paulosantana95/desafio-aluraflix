@@ -11,18 +11,19 @@ let newMovie = document.querySelector("#showMovieList");
 let i;
 
 function addMovie(){
-    if (imgLink != movieList){
+    if (movieList.indexOf(imgLink) == -1){
         let imgLink = document.querySelector("#imgLink").value;
+
         movieList.push(imgLink);
+
         newMovie.innerHTML = newMovie.innerHTML + "<img src=" +imgLink+ ">" 
-    } else {
-        return prompt("Filme já adicionado! Por favor selecione um Título diferente.")
+    } else { //if (movieList.indexOf(imgLink) > -1 )
+        alert("Filme já adicionado! Por favor selecione um Título diferente.");
     }
 }
 
 for(i = 0; i < movieList.length; i++) {
     document.write("<img src="+ movieList[i] +">")
 }
-
 
 
